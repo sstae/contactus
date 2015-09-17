@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GFX.Core")]
+[assembly: AssemblyTitle("ContactUs.Services")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GFX.Core")]
+[assembly: AssemblyProduct("ContactUs.Services")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ca4767f4-7c24-4ca0-805e-90ae9f7ee099")]
+[assembly: Guid("6aa592dc-a52f-43a0-b404-da8d407301d9")]
 
 // Version information for an assembly consists of the following four values:
 //
