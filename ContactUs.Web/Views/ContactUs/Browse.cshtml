@@ -24,7 +24,33 @@
                 <td>@t.Title</td>
                 <td>@t.LastActivityDate</td>
                 <td>@t.Status</td>
-                <td></td>
+                <td>
+                    <button disabled="@(!t.CanChangeTo(TicketStatus.Accepted))" class=" btn btn-success btn-xs">
+                        Accepted
+                    </button>
+                    <button disabled="@(!t.CanChangeTo(TicketStatus.Rejected))" class=" btn btn-danger btn-xs">
+                        Rejected
+                    </button>
+                    <button disabled="@(!t.CanChangeTo(TicketStatus.Closed))" class=" btn btn-info btn-xs">
+                        Closed
+                    </button>
+                    
+                    @*@if (t.CanChangeTo(TicketStatus.Accepted)) {
+                        <button class=" btn btn-success btn-xs">
+                            Accepted
+                        </button>
+                    }
+                    @if (t.CanChangeTo(TicketStatus.Rejected)) {
+                        <button class=" btn btn-danger btn-xs">
+                            Rejected
+                        </button>
+                    }
+                    @if (t.CanChangeTo(TicketStatus.Closed)) {
+                        <button class=" btn btn-info btn-xs">
+                            Closed
+                        </button>
+                    }*@
+                </td>
             </tr>
         }
     </tbody>

@@ -9,6 +9,7 @@ namespace ContactUs.Models
     {
         New,
         Accepted,
+        Rejected,
         Closed
     }
 }
