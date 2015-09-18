@@ -1,4 +1,5 @@
 ﻿using ContactUs.Models;
+using ContactUs.Models.States;
 using ContactUs.Services;
 using System;
 using System.Collections.Generic;
@@ -9,11 +10,7 @@ using Xunit;
 
 namespace ContactUs.Facts.Models {
     public class TicketFacts {
-        // 1. NewTicketStatus_ShouldBeNew
-        // 2. NewTicket_AbleToChangeToAcceptedAndRejected_ButNotClosed
-        // 3. AcceptedTicket_AbleToChangeToClosedOrRejected
-        // 4. RejectedAndClosedTicket_CannotChangeStatusAnymore
-        public class Ticket_Status {
+        public class ChangingStatus {
             [Fact]
             public void NewTicket_ShouldBeNew() {
                 var t = new Ticket();
@@ -47,7 +44,7 @@ namespace ContactUs.Facts.Models {
                 var t = new Ticket();
                 t.Title = "Test Ticket";
                 t.Body = "Blah blah";
-                t.Reject();
+                t.Reject(reason:"Blah hhh");
                 Assert.False(t.CanChangeTo(TicketStatus.New));
                 Assert.False(t.CanChangeTo(TicketStatus.Accepted));
                 Assert.False(t.CanChangeTo(TicketStatus.Rejected));
@@ -65,6 +62,39 @@ namespace ContactUs.Facts.Models {
                 Assert.False(t.CanChangeTo(TicketStatus.Rejected));
                 Assert.False(t.CanChangeTo(TicketStatus.Closed));
             }
+        }
+        public class ChangStatus {
+            [Fact]
+            public void ChangeFromNewToAccepted() {
+                var t = new Ticket();
+
+                Assert.True(t.Status == TicketStatus.New);
+                Assert.Equal(1, t.TicketStates.Count());
+
+                t.Accept();
+
+                Assert.True(t.Status == TicketStatus.Accepted);
+                Assert.Equal(2, t.TicketStates.Count());
+            }
+
+            [Fact]
+            public void ChangeFromNewToRejected() {
+                var t = new Ticket();
+
+                Assert.True(t.Status == TicketStatus.New);
+                Assert.Equal(1, t.TicketStates.Count());
+
+                t.Reject(reason: "test reject");
+
+                Assert.True(t.Status == TicketStatus.Rejected);
+                Assert.Equal(2, t.TicketStates.Count());
+
+                var s2 = t.CurrentState as RejectedTicketState;
+                Assert.Equal("test reject", s2.Reason);
+
+            }
+
+            
         }
     }
 }
