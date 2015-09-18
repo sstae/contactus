@@ -48,72 +48,141 @@
     <div>
           Tests run: <a href="#all"><b>7</b></a>  
           
-          Run time: <b>2.791s</b></div>
+            Failures: <a href="#failures"><b>7</b></a>,
+          
+          Run time: <b>2.353s</b></div>
+    <br />
+    <h2>
+      <a id="failures" />Failed tests
+          </h2>
+    <div class="row">
+      <span class="timing">0.0013359s
+        </span>
+      <span class="failure">✘</span>
+       ContactUs.Facts.Models.TicketFacts+Ticket_Status.AcceptedTicket_ableToChangeToClosedOrRejected<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Models.TicketFacts.Ticket_Status.AcceptedTicket_ableToChangeToClosedOrRejected() in d:\Lab\contactus\ContactUs.Facts\Models\TicketFacts.cs:line 36</pre></div>
+    <div class="altrow">
+      <span class="timing">0.0862613s
+        </span>
+      <span class="failure">✘</span>
+       ContactUs.Facts.Models.TicketFacts+Ticket_Status.ClosedTicket_CannotChangeStatusAnymore<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Models.TicketFacts.Ticket_Status.ClosedTicket_CannotChangeStatusAnymore() in d:\Lab\contactus\ContactUs.Facts\Models\TicketFacts.cs:line 58</pre></div>
+    <div class="row">
+      <span class="timing">0.0011959s
+        </span>
+      <span class="failure">✘</span>
+       ContactUs.Facts.Models.TicketFacts+Ticket_Status.NewTicket_ableToChangeToAcceptedOrRejected_ButNotClosed<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Models.TicketFacts.Ticket_Status.NewTicket_ableToChangeToAcceptedOrRejected_ButNotClosed() in d:\Lab\contactus\ContactUs.Facts\Models\TicketFacts.cs:line 26</pre></div>
+    <div class="altrow">
+      <span class="timing">0.0010845s
+        </span>
+      <span class="failure">✘</span>
+       ContactUs.Facts.Models.TicketFacts+Ticket_Status.NewTicket_ShouldBeNew<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Models.TicketFacts.Ticket_Status.NewTicket_ShouldBeNew() in d:\Lab\contactus\ContactUs.Facts\Models\TicketFacts.cs:line 19</pre></div>
+    <div class="row">
+      <span class="timing">0.0011727s
+        </span>
+      <span class="failure">✘</span>
+       ContactUs.Facts.Models.TicketFacts+Ticket_Status.RejectedTicket_CannotChangeStatusAnymore<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Models.TicketFacts.Ticket_Status.RejectedTicket_CannotChangeStatusAnymore() in d:\Lab\contactus\ContactUs.Facts\Models\TicketFacts.cs:line 47</pre></div>
+    <div class="altrow">
+      <span class="timing">0.0020803s
+        </span>
+      <span class="failure">✘</span>
+       ContactUs.Facts.Services.TicketServiceFacts+Add.NewTicket_HasCorrectId<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Services.TicketServiceFacts.Add.NewTicket_HasCorrectId() in d:\Lab\contactus\ContactUs.Facts\Services\TicketServiceFacts.cs:line 19</pre></div>
+    <div class="row">
+      <span class="timing">1.9844654s
+        </span>
+      <span class="failure">✘</span>
+       ContactUs.Facts.Services.TicketServiceFacts+Add.NewTicket_LastActivityDateShouldBeCreatedDate<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Services.TicketServiceFacts.Add.NewTicket_LastActivityDateShouldBeCreatedDate() in d:\Lab\contactus\ContactUs.Facts\Services\TicketServiceFacts.cs:line 34</pre></div>
     <br />
     <h2>
       <a id="all" />All tests
         </h2>
     <h5>Click test class name to expand/collapse test details</h5>
     <h3>
-      <span class="timing">0.108s
+      <span class="timing">0.091s
             </span>
       <span class="clickable" onclick="ToggleClass('classID0EY')" ondblclick="ToggleClass('classID0EY')">
-        <span class="success">✔</span>
+        <span class="failure">✘</span>
                ContactUs.Facts.Models.TicketFacts+Ticket_Status
                <span class="testcount">
                 (5 tests)
               </span></span>
       <br clear="all" />
     </h3>
-    <div class="indent" style="display: none;" id="classID0EY">
+    <div class="indent" id="classID0EY">
       <div class="row">
-        <span class="timing">0.0005573s
+        <span class="timing">0.0013359s
         </span>
-        <span class="success">✔</span>
-       ContactUs.Facts.Models.TicketFacts+Ticket_Status.AcceptedTicket_ableToChangeToClosedOrRejected<br clear="all" /></div>
+        <span class="failure">✘</span>
+       ContactUs.Facts.Models.TicketFacts+Ticket_Status.AcceptedTicket_ableToChangeToClosedOrRejected<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Models.TicketFacts.Ticket_Status.AcceptedTicket_ableToChangeToClosedOrRejected() in d:\Lab\contactus\ContactUs.Facts\Models\TicketFacts.cs:line 36</pre></div>
       <div class="altrow">
-        <span class="timing">0.105296s
+        <span class="timing">0.0862613s
         </span>
-        <span class="success">✔</span>
-       ContactUs.Facts.Models.TicketFacts+Ticket_Status.ClosedTicket_CannotChangeStatusAnymore<br clear="all" /></div>
+        <span class="failure">✘</span>
+       ContactUs.Facts.Models.TicketFacts+Ticket_Status.ClosedTicket_CannotChangeStatusAnymore<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Models.TicketFacts.Ticket_Status.ClosedTicket_CannotChangeStatusAnymore() in d:\Lab\contactus\ContactUs.Facts\Models\TicketFacts.cs:line 58</pre></div>
       <div class="row">
-        <span class="timing">0.0004767s
+        <span class="timing">0.0011959s
         </span>
-        <span class="success">✔</span>
-       ContactUs.Facts.Models.TicketFacts+Ticket_Status.NewTicket_ableToChangeToAcceptedOrRejected_ButNotClosed<br clear="all" /></div>
+        <span class="failure">✘</span>
+       ContactUs.Facts.Models.TicketFacts+Ticket_Status.NewTicket_ableToChangeToAcceptedOrRejected_ButNotClosed<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Models.TicketFacts.Ticket_Status.NewTicket_ableToChangeToAcceptedOrRejected_ButNotClosed() in d:\Lab\contactus\ContactUs.Facts\Models\TicketFacts.cs:line 26</pre></div>
       <div class="altrow">
-        <span class="timing">0.0003684s
+        <span class="timing">0.0010845s
         </span>
-        <span class="success">✔</span>
-       ContactUs.Facts.Models.TicketFacts+Ticket_Status.NewTicket_ShouldBeNew<br clear="all" /></div>
+        <span class="failure">✘</span>
+       ContactUs.Facts.Models.TicketFacts+Ticket_Status.NewTicket_ShouldBeNew<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Models.TicketFacts.Ticket_Status.NewTicket_ShouldBeNew() in d:\Lab\contactus\ContactUs.Facts\Models\TicketFacts.cs:line 19</pre></div>
       <div class="row">
-        <span class="timing">0.0008442s
+        <span class="timing">0.0011727s
         </span>
-        <span class="success">✔</span>
-       ContactUs.Facts.Models.TicketFacts+Ticket_Status.RejectedTicket_CannotChangeStatusAnymore<br clear="all" /></div>
+        <span class="failure">✘</span>
+       ContactUs.Facts.Models.TicketFacts+Ticket_Status.RejectedTicket_CannotChangeStatusAnymore<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Models.TicketFacts.Ticket_Status.RejectedTicket_CannotChangeStatusAnymore() in d:\Lab\contactus\ContactUs.Facts\Models\TicketFacts.cs:line 47</pre></div>
     </div>
     <h3>
-      <span class="timing">2.451s
+      <span class="timing">1.987s
             </span>
-      <span class="clickable" onclick="ToggleClass('classID0E4B')" ondblclick="ToggleClass('classID0E4B')">
-        <span class="success">✔</span>
+      <span class="clickable" onclick="ToggleClass('classID0ERC')" ondblclick="ToggleClass('classID0ERC')">
+        <span class="failure">✘</span>
                ContactUs.Facts.Services.TicketServiceFacts+Add
                <span class="testcount">
                 (2 tests)
               </span></span>
       <br clear="all" />
     </h3>
-    <div class="indent" style="display: none;" id="classID0E4B">
+    <div class="indent" id="classID0ERC">
       <div class="row">
-        <span class="timing">2.4412048s
+        <span class="timing">0.0020803s
         </span>
-        <span class="success">✔</span>
-       ContactUs.Facts.Services.TicketServiceFacts+Add.NewTicket_HasCorrectId<br clear="all" /></div>
+        <span class="failure">✘</span>
+       ContactUs.Facts.Services.TicketServiceFacts+Add.NewTicket_HasCorrectId<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Services.TicketServiceFacts.Add.NewTicket_HasCorrectId() in d:\Lab\contactus\ContactUs.Facts\Services\TicketServiceFacts.cs:line 19</pre></div>
       <div class="altrow">
-        <span class="timing">0.0094428s
+        <span class="timing">1.9844654s
         </span>
-        <span class="success">✔</span>
-       ContactUs.Facts.Services.TicketServiceFacts+Add.NewTicket_LastActivityDateShouldBeCreatedDate<br clear="all" /></div>
+        <span class="failure">✘</span>
+       ContactUs.Facts.Services.TicketServiceFacts+Add.NewTicket_LastActivityDateShouldBeCreatedDate<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at ContactUs.Models.Ticket.ChangeTo(TicketState toState) in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 44
+   at ContactUs.Models.Ticket..ctor() in d:\Lab\contactus\ContactUs.Models\Ticket.cs:line 22
+   at ContactUs.Facts.Services.TicketServiceFacts.Add.NewTicket_LastActivityDateShouldBeCreatedDate() in d:\Lab\contactus\ContactUs.Facts\Services\TicketServiceFacts.cs:line 34</pre></div>
     </div>
   </body>
 </html>
