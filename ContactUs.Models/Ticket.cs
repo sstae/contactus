@@ -41,8 +41,10 @@ namespace ContactUs.Models {
             ChangeTo(new ClosedTicketState(this));
         }
 
-        public void Reject() {
-            ChangeTo(new RejectedTicketState(this));
+        public void Reject(string reason) {
+            var toState = new RejectedTicketState(this);
+            toState.Reason = reason;
+            ChangeTo(toState);
         }
 
         public void ReOpen() {
